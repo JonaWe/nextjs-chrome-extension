@@ -26,6 +26,9 @@
       "description": "Opens popup.html"
     }
   },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
   "icons": {
     "16": "/images/get_started16.png",
     "32": "/images/get_started32.png",
