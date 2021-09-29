@@ -7,7 +7,8 @@
     "build": "INLINE_RUNTIME_CHUNK=false next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "node scripts/postbuild.js && tsc background/*.ts && mv background/background.js out/background.js"
+    "build:serviceWorkers": "tsc serviceWorkers/*.ts && mv serviceWorkers/background.js out/background.js",
+    "postbuild": "node scripts/postbuild.js && npm run build:serviceWorkers"
   },
   "dependencies": {
     "next": "11.1.2",
