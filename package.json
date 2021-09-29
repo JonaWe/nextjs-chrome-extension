@@ -7,7 +7,7 @@
     "build": "INLINE_RUNTIME_CHUNK=false next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "node scripts/postbuild.js"
+    "postbuild": "node scripts/postbuild.js && tsc background/*.ts && mv background/background.js out/background.js"
   },
   "dependencies": {
     "next": "11.1.2",
@@ -16,6 +16,7 @@
     "styled-components": "^5.3.1"
   },
   "devDependencies": {
+    "@types/chrome": "^0.0.158",
     "@types/react": "17.0.24",
     "@types/styled-components": "^5.1.14",
     "babel-plugin-styled-components": "^1.13.2",
