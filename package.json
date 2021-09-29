@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "INLINE_RUNTIME_CHUNK=false next build && next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "node scripts/postbuild.js"
   },
   "dependencies": {
     "next": "11.1.2",
@@ -17,6 +18,7 @@
     "@types/react": "17.0.24",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
+    "replace-in-files": "^3.0.0",
     "typescript": "4.4.3"
   }
 }
